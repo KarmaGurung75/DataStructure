@@ -1,6 +1,10 @@
 package Caching;
 
 import java.util.HashMap;
+import java.util.Deque;
+import java.util.LinkedList;
+import java.util.Map;
+import java.util.*;
 
 public class LRUCaching {
 
@@ -94,5 +98,15 @@ public class LRUCaching {
             node.next=null;
             node.prev=null;
         }
+    }
+    public static void main(String[] args) {
+        Linked_HashMap obj = new Linked_HashMap(4);
+        obj.get_Value(4);
+        obj.get_Value(5);
+        obj.get_Value(6);
+        obj.get_Value(4);
+        obj.get_Value(7);
+        obj.get_Value(5);
+        obj.display();
     }
 }
