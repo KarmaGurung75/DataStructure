@@ -1,5 +1,6 @@
 package Queue;
 
+
 public class QueueTest {
     int front;
     int rear;
@@ -18,7 +19,7 @@ public class QueueTest {
             System.out.println("queue overflow");
         }
         else{
-            if(ismpty()){
+            if(isempty()){
                 front=0;
             }
             queue[++rear]=data;
@@ -26,7 +27,7 @@ public class QueueTest {
     }
 
     public int dequeue(){
-        if(ismpty()){
+        if(isempty()){
             System.out.println("queue underflow");
             return -9999;
         }
@@ -41,10 +42,9 @@ public class QueueTest {
             return queue[temp];
         }
     }
+    
 
-
-
-    public boolean ismpty(){
+    public boolean isempty(){
         return front==-1 && rear==-1;
     }
 
